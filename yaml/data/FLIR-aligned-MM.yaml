@@ -1,0 +1,15 @@
+path: ./datasets/FLIR-aligned
+channels: 6
+
+train:
+  - imageRGB/train
+val:
+  - imageRGB/test
+test:
+  - imageRGB/test
+
+names:
+  0: bicycle
+  1: car
+  2: dog
+  3: person

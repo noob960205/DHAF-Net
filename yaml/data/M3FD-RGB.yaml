@@ -1,0 +1,10 @@
+path: ./M3FD
+
+train:
+  - imageRGB/train
+val:
+  - imageRGB/test
+test:
+  - imageRGB/test
+
+names: ['People', 'Car', 'Lamp', 'Motorcycle', 'Bus','Truck']

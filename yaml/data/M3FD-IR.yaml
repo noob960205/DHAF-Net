@@ -1,0 +1,16 @@
+path: ./datasets/M3FD
+
+train:
+  - imageIR/train
+val:
+  - imageIR/test
+test:
+  - imageIR/test
+
+names:
+  0: People
+  1: Car
+  2: Lamp
+  3: Motorcycle
+  4: Bus
+  5: Truck
