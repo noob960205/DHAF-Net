@@ -49,6 +49,7 @@ DHAF-Net is implemented based on the Ultralytics YOLOv8 framework with the follo
 - Custom modules
 	- ultralytics/nn/modules/conv.py
 	- ultralytics/nn/modules/block.py
+- Others…
 
 
 ## Dataset & Weights
@@ -59,15 +60,15 @@ Please convert datasets to YOLO format and organize them as follows:
 FLIR-aligned / LLVIP / M3FD / ...
     │
     ├─imageIR
-    │   ├─test
-    │   └─train
+    │    ├─test
+    │    └─train
     ├─imageRGB
-    │   ├─test
-    │   └─train
+    │    ├─test
+    │    └─train
     └─labels
-        ├─test
-        ├─train
-        └─classes.txxt
+         ├─test
+         ├─train
+         └─classes.txxt
 ```
 
 Dataset & weights download link: 
@@ -93,8 +94,6 @@ python predict.py
 ```
 
 ## Results
-
-Please refer to the `./runs/detect` directory for training results.
 
 <table border="1" cellpadding="5" cellspacing="0" style="text-align: center;">
     <thead>
@@ -345,7 +344,7 @@ Please refer to the `./runs/detect` directory for training results.
         <!-- 可以继续添加更多行 -->
     </tbody>
 </table>
----
+Please refer to the `./runs/detect` directory for training results.
 
 ## Citation
 
