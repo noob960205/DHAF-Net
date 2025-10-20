@@ -12,7 +12,7 @@ Official PyTorch implementation of “DHAF-Net: Decoupled and Hierarchical Atten
 
 ## Overview
 
-![model architecture](model architecture.png)
+![model architecture](./model_architecture.png)
 
 ## Environment Setup
 
