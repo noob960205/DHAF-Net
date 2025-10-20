@@ -345,6 +345,8 @@ Please refer to the `./runs/detect` directory for training results.
         <!-- 可以继续添加更多行 -->
     </tbody>
 </table>
+---
+
 ## Citation
 
 If you find this work useful in your research, please consider citing our paper:
