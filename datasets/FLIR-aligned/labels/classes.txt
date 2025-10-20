@@ -1,4 +1,0 @@
-bicycle
-car
-dog
-person
