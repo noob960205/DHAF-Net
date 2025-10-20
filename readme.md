@@ -95,6 +95,8 @@ python predict.py
 
 ## Results
 
+Please refer to the **`./runs/detect/`** directory for training results.
+
 <table border="1" cellpadding="5" cellspacing="0" style="text-align: center;">
     <thead>
         <tr>
@@ -344,7 +346,7 @@ python predict.py
         <!-- 可以继续添加更多行 -->
     </tbody>
 </table>
-Please refer to the **`./runs/detect`** directory for training results.
+---
 
 ## Citation
 
