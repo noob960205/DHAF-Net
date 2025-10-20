@@ -344,7 +344,7 @@ python predict.py
         <!-- 可以继续添加更多行 -->
     </tbody>
 </table>
-Please refer to the `./runs/detect` directory for training results.
+Please refer to the **`./runs/detect`** directory for training results.
 
 ## Citation
 
