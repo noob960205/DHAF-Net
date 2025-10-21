@@ -71,7 +71,7 @@ FLIR-aligned / LLVIP / M3FD / ...
          └─classes.txxt
 ```
 
-(:star:) **Dataset & weights download link:** 
+⭐ **Dataset & weights download link:** 
 
 - [Baidu drive](https://pan.baidu.com/s/1LgY7_Xs86yyOJX_olyyikg?pwd=dhaf)
 - [Google drive](https://drive.google.com/drive/folders/1kYFKWIeLFmQTXxxvmQhWh8aIjWEup8G5)
