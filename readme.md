@@ -8,7 +8,7 @@ Official PyTorch implementation of “DHAF-Net: Decoupled and Hierarchical Atten
 
 ## Abstract
 
-融合可见光（RGB）与红外（IR）图像是实现全天候鲁棒目标检测的关键技术。然而，现有的多模态融合方法在特征交互过程中常常面临模态不平衡、信息冗余、模态干扰以及模态特有信息被抑制等问题。为应对这些挑战，本文提出了一种新颖的解耦与分层注意力融合网络（Decoupled and Hierarchical Attention Fusion Network, DHAF-Net），重新定义了多模态特征融合的范式。具体而言，DHAF-Net引入了一个特征解耦框架，将跨模态信息显式地分解为互补的“模态特性（Specificity）”与“模态共性（Commonality）”两个分支，从而最大化地保留并利用各模态信息。在此基础上，本文设计了解耦与分层注意力融合模块（DHAF module），在多尺度层面实现特征的精细化增强与融合。该模块通过自注意力机制捕获并强化特性流内部的上下文依赖关系，同时利用交叉注意力机制促进共性流之间的对称交互与语义对齐。最后，引入一个轻量级的门控加权机制，对多路增强后的特征流进行自适应加权，有效缓解模态不平衡问题。在LLVIP、M^3^FD等公开数据集上的大量实验结果表明，DHAF-Net在性能上显著优于现有的多模态融合方法，达到了当前最优（state-of-the-art）水平。这充分验证了所提出的解耦与分层融合策略的有效性，并为多模态目标检测建立了新的性能基准。
+Fusing visible (RGB) and infrared (IR) images is a key technology for achieving robust all-weather object detection. However, existing multimodal fusion methods often face challenges during feature interaction, such as modality imbalance, information redundancy, modality interference, and suppression of modality-specific information. To address these challenges, we propose a novel Decoupled and Hierarchical Attention Fusion Network (DHAF-Net), which redefines the paradigm of multimodal feature fusion. Specifically, DHAF-Net introduces a feature decoupling framework that explicitly decomposes cross-modal information into complementary branches: "modality specificity" and "modality commonality," thereby maximizing the retention and utilization of each modality's information. Based on this, we design a Decoupled and Hierarchical Attention Fusion module (DHAF module) to achieve fine-grained feature enhancement and fusion at multiple scales. This module captures and strengthens the contextual dependencies within the specificity flow using self-attention mechanisms, while utilizing cross-attention to promote symmetric interaction and semantic alignment between the commonality flows. Finally, a lightweight gated weighting mechanism is introduced to adaptively weight the enhanced feature streams, effectively alleviating the modality imbalance problem. Extensive experiments on publicly available datasets such as LLVIP and M^3^FD demonstrate that DHAF-Net significantly outperforms existing multimodal fusion methods, achieving state-of-the-art performance. This fully validates the effectiveness of the proposed decoupled and hierarchical fusion strategy and establishes a new performance benchmark for multimodal object detection.
 
 ## Overview
 
@@ -71,7 +71,7 @@ FLIR-aligned / LLVIP / M3FD / ...
          └─classes.txxt
 ```
 
-Dataset & weights download link: 
+(:star:) **Dataset & weights download link:** 
 
 - [Baidu drive](https://pan.baidu.com/s/1LgY7_Xs86yyOJX_olyyikg?pwd=dhaf)
 - [Google drive](https://drive.google.com/drive/folders/1kYFKWIeLFmQTXxxvmQhWh8aIjWEup8G5)
