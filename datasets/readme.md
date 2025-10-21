@@ -1,4 +1,1 @@
-Dataset & weights download link: 
-
-- [Baidu](https://pan.baidu.com/s/1LgY7_Xs86yyOJX_olyyikg?pwd=dhaf)
-- [Google]()
+The datasets and pretrained weights can be downloaded from [Baidu drive](https://pan.baidu.com/s/1LgY7_Xs86yyOJX_olyyikg?pwd=dhaf) or [Google drive](https://drive.google.com/drive/folders/1kYFKWIeLFmQTXxxvmQhWh8aIjWEup8G5).
