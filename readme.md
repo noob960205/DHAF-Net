@@ -8,7 +8,7 @@ Official PyTorch implementation of “DHAF-Net: Decoupled and Hierarchical Atten
 
 ## Abstract
 
-Fusing visible (RGB) and infrared (IR) images is a key technology for achieving robust all-weather object detection. However, existing multimodal fusion methods often face challenges during feature interaction, such as modality imbalance, information redundancy, modality interference, and suppression of modality-specific information. To address these challenges, we propose a novel Decoupled and Hierarchical Attention Fusion Network (DHAF-Net), which redefines the paradigm of multimodal feature fusion. Specifically, DHAF-Net introduces a feature decoupling framework that explicitly decomposes cross-modal information into complementary branches: "modality specificity" and "modality commonality," thereby maximizing the retention and utilization of each modality's information. Based on this, we design a Decoupled and Hierarchical Attention Fusion module (DHAF module) to achieve fine-grained feature enhancement and fusion at multiple scales. This module captures and strengthens the contextual dependencies within the specificity flow using self-attention mechanisms, while utilizing cross-attention to promote symmetric interaction and semantic alignment between the commonality flows. Finally, a lightweight gated weighting mechanism is introduced to adaptively weight the enhanced feature streams, effectively alleviating the modality imbalance problem. Extensive experiments on publicly available datasets such as LLVIP and M^3^FD demonstrate that DHAF-Net significantly outperforms existing multimodal fusion methods, achieving state-of-the-art performance. This fully validates the effectiveness of the proposed decoupled and hierarchical fusion strategy and establishes a new performance benchmark for multimodal object detection.
+The fusion of visible (RGB) and infrared (IR) images is a pivotal technology for robust object detection under all-weather, around-the-clock conditions. However, existing multi-modal fusion methods often suffer from challenges such as modality imbalance, information redundancy, interference, and the suppression of modality-specific information. To address these challenges, we propose a novel Decoupled and Hierarchical Attention Fusion Network (DHAF-Net), which introduces a new paradigm for multi-modal feature fusion. Architecturally, DHAF-Net explicitly decouples cross-modal features into two components: modality-specific and modality-common information, enabling a more effective preservation and utilization of complementary information from each modality. To implement this, DHAF-Net employs multiple feature streams to capture RGB-specific, IR-specific, and common information, which are then enhanced and fused at multiple scales. This is accomplished through our proposed Decoupled and Hierarchical Attention Fusion (DHAF) module, which integrates two key components: the Differentiated Attention Mechanism (DAM) and the lightweight Adaptive Co-Gated Fusion (ACGF) module. Specifically, the DAM utilizes self-attention to enhance modality-specific features and cross-attention to promote the alignment and interaction of common information. The ACGF performs adaptive weighting across local and global scales to dynamically balance the contributions of features from each modality, thereby mitigating the modal imbalance problem. Experimental results on public datasets such as LLVIP and M$^\text{3}$FD demonstrate that DHAF-Net significantly outperforms existing methods, achieving state-of-the-art performance. These results validate the effectiveness of our proposed decoupling and hierarchical fusion strategy and establish a new performance benchmark for multi-modal object detection.
 
 ## Overview
 
@@ -120,7 +120,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
         <!-- 示例数据行 - 您可以根据需要添加更多行 -->
         <tr>
             <td>Faster R-CNN</td>
-            <td>15</td>
+            <td>TPAMI'15</td>
             <td>IR</td>
             <td>ResNet50</td>
             <td>73.4</td>
@@ -156,7 +156,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
         </tr>
         <tr>
             <td>Faster R-CNN</td>
-            <td>15</td>
+            <td>TPAMI'15</td>
             <td>RGB</td>
             <td>ResNet50</td>
             <td>65.0</td>
@@ -191,8 +191,8 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>54.0</td>
         </tr>
         <tr>
-            <td>GAFF <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Zhang_Guided_Attentive_Feature_Fusion_for_Multispectral_Pedestrian_Detection_WACV_2021_paper.pdf">[47]</a></td>
-            <td>WWACV'21</td>
+            <td>GAFF <a>[29]</a></td>
+            <td>WACV'21</td>
             <td>IR+RGB</td>
             <td>Resnet18</td>
             <td>72.9</td>
@@ -203,7 +203,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>55.8</td>
         </tr>
         <tr>
-            <td>ProbEn <a href="https://arxiv.org/pdf/2104.02904">[48]</a></td>
+            <td>ProbEn <a>[30]</a></td>
             <td>ECCV'22</td>
             <td>IR+RGB</td>
             <td>Resnet50</td>
@@ -215,7 +215,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>51.5</td>
         </tr>
         <tr>
-            <td>CSAA <a href="https://openaccess.thecvf.com/content/CVPR2023W/PBVS/papers/Cao_Multimodal_Object_Detection_by_Channel_Switching_and_Spatial_Attention_CVPRW_2023_paper.pdf">[49]</a></td>
+            <td>CSAA <a>[31]</a></td>
             <td>CVPR'23</td>
             <td>IR+RGB</td>
             <td>Resnet50</td>
@@ -227,7 +227,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>59.2</td>
         </tr>
         <tr>
-            <td>CrossFormer <a href="https://www.sciencedirect.com/science/article/abs/pii/S016786552400045X">[50]</a></td>
+            <td>CrossFormer <a>[32]</a></td>
             <td>PRL'24</td>
             <td>IR+RGB</td>
             <td>Resnet50</td>
@@ -239,8 +239,8 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>65.1</td>
         </tr>
         <tr>
-            <td>RSDet <a href="https://arxiv.org/pdf/2401.10731">[51]</a></td>
-            <td>24</td>
+            <td>RSDet <a>[33]</a></td>
+            <td>arXiv'24</td>
             <td>IR+RGB</td>
             <td>Resnet50</td>
             <td>83.9</td>
@@ -251,7 +251,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>61.3</td>
         </tr>
         <tr>
-            <td>Fusion-DETR <a href="https://ieeexplore.ieee.org/abstract/document/10929712/">[52]</a></td>
+            <td>Fusion-DETR <a>[34]</a></td>
             <td>25</td>
             <td>IR+RGB</td>
             <td>Resnet101</td>
@@ -263,8 +263,8 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>64.6</td>
         </tr>
         <tr>
-            <td>CFT <a href="https://arxiv.org/pdf/2111.00273">[53]</a></td>
-            <td>21</td>
+            <td>CFT <a>[35]</a></td>
+            <td>ArXiv'21</td>
             <td>IR+RGB</td>
             <td>CSPDarknet53v5</td>
             <td>78.7</td>
@@ -275,7 +275,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>63.6</td>
         </tr>
         <tr>
-            <td>YOLO-MS <a href="https://ieeexplore.ieee.org/abstract/document/10021826">[54]</a></td>
+            <td>YOLO-MS <a>[36]</a></td>
             <td>TCDS'23</td>
             <td>IR+RGB</td>
             <td>CSPDarknet53v5</td>
@@ -287,7 +287,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>60.2</td>
         </tr>
         <tr>
-            <td>ICAFusion <a href="https://www.sciencedirect.com/science/article/pii/S0031320323006118">[55]</a></td>
+            <td>ICAFusion <a>[37]</a></td>
             <td>PR'24</td>
             <td>IR+RGB</td>
             <td>CSPDarknet53v5</td>
@@ -299,7 +299,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>60.1</td>
         </tr>
         <tr>
-            <td>LRAF-Net <a href="https://ieeexplore.ieee.org/abstract/document/10144688">[56]</a></td>
+            <td>LRAF-Net <a>[38]</a></td>
             <td>TNNLS'24</td>
             <td>IR+RGB</td>
             <td>CSPDarknet53v5</td>
@@ -311,7 +311,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
             <td>66.3</td>
         </tr>
         <tr>
-            <td rowspan="2">Fusion-Mamba <a href="https://ieeexplore.ieee.org/abstract/document/11124513">[57]</a></td>
+            <td rowspan="2">Fusion-Mamba <a>[39]</a></td>
             <td rowspan="2">TMM'25</td>
             <td rowspan="2">IR+RGB</td>
             <td>CSPDarknet53v5</td>
@@ -346,6 +346,7 @@ Please refer to the **`./runs/detect/`** directory for training results.
         <!-- 可以继续添加更多行 -->
     </tbody>
 </table>
+
 ---
 
 ## Citation
